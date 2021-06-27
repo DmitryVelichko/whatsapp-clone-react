@@ -18,3 +18,6 @@ const db = firebaseApp.firestore(); // variable db accesses the firestore instan
 const auth = firebase.auth(); // authentication
 
 const provider = new firebase.auth.GoogleAuthProvider(); // authentication for Google
+
+export { auth, provider };
+export default db;

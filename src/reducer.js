@@ -1,0 +1,4 @@
+export initialState = {
+    user: null,
+};
+

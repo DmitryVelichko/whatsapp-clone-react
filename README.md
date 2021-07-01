@@ -1,4 +1,5 @@
-WhatsApp clone built with ReactJS, Firebase (Firestore), Material UI, React Router, React Context API, Redux, and Google Authentication.![Untitled](https://user-images.githubusercontent.com/42185328/124085677-f5c15f00-da58-11eb-888f-2715f24c944c.png)
+WhatsApp clone built with ReactJS, Firebase (Firestore), Material UI, React Router, React Context API, Redux, and Google Authentication.
+
 
 ![image](https://user-images.githubusercontent.com/42185328/124084924-2d7bd700-da58-11eb-8b23-bffc58ca1042.png)
 

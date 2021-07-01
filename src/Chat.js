@@ -6,6 +6,8 @@ import './Chat.css';
 import { Avatar, IconButton } from '@material-ui/core';
 import { useParams } from 'react-router-dom';
 import db from './firebase';
+import { useStateValue } from './StateProvider';
+import firebase from 'firebase';
 
 function Chat() {
     const [seed, setSeed] = useState("");
@@ -13,6 +15,7 @@ function Chat() {
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
+    const [{ user }, dispatch] = useStateValue();
 
 
     useEffect(() => {
@@ -33,6 +36,11 @@ function Chat() {
 
     const sendMessage = (e) => {
       e.preventDefault();
+      db.collection('rooms').doc(roomId).collection('messages').add({
+        message: input,
+        name: user.displayName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
       setInput("");
     }
 

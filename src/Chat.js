@@ -63,7 +63,7 @@ function Chat() {
             {messages.map((message) => (
             <p className={`chat__message ${true && 'chat__receiver'}`}>
             <span className="chat__name">{message.name}</span>{message.message}
-            <span className="chat__timestamp">{}</span>
+            <span className="chat__timestamp">{new Date(message.timestamp?.toDate()).toUTCString()}</span>
             </p>
             ))}
         </div>

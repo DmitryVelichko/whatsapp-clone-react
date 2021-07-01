@@ -12,12 +12,16 @@ function Chat() {
     const [input, setInput] = useState("");
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
+    const [messages, setMessages] = useState([]);
+
 
     useEffect(() => {
       if (roomId) {
         db.collection('rooms').doc(roomId).onSnapshot(snapshot => (
           setRoomName(snapshot.data().name)
-        ))
+        ));
+
+        
       }
     }, [roomId]);
 
